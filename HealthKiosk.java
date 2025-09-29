@@ -19,7 +19,7 @@ public class HealthKiosk {
                 service = "Pharmacy";
                 System.out.println("Go to: Pharmacy Desk");
                 break;
-            case 'L':
+             case 'L':
                 service = "Lab";
                 System.out.println("Go to: Lab Desk");
                 break;
@@ -27,7 +27,7 @@ public class HealthKiosk {
                 service = "Triage";
                 System.out.println("Go to: Triage Desk");
                 break;
-            case 'C':
+          case 'C':
                 service = "Counseling";
                 System.out.println("Go to: Counseling Desk");
                 break;
@@ -37,6 +37,8 @@ public class HealthKiosk {
         }
 
        
+
+
        // 2)
       
         double metricValue = 0;  // i declared these variables  to hold the results from each calculation for later use.
@@ -81,11 +83,9 @@ public class HealthKiosk {
                 System.out.print("Enter angle in degrees: ");
                 double angle = input.nextDouble();
                 double radians = Math.toRadians(angle);
-
                 double sin = Math.round(Math.sin(radians) * 1000) / 1000.0;
                 double cosine = Math.round(Math.cos(radians) * 1000) / 1000.0;
                 System.out.println("sin = " + sin + "  cos = " + cosine);
-
                 metricValue = Math.round(Math.sin(radians) * 100); 
             }
         }
@@ -115,17 +115,13 @@ public class HealthKiosk {
             System.out.println("the ID is valid");
         }
 
-       
         // 4 - task ,
       
         System.out.print("Enter your first name: ");
         String firstName = input.next();
-
         char baseCode = Character.toUpperCase(firstName.charAt(0));
         char shifted = (char) ('A' + (baseCode - 'A' + 2) % 26);
-
         String lastTwo = shortID.substring(3, 5); 
-
         String display = shifted + lastTwo + "-" + (int) metricValue;
         System.out.println("Display Code: " + display);
 
